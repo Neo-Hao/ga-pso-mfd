@@ -19,17 +19,19 @@ This repo contains the implementation of the Genetic Algorithm (GA) on the Multi
 
 ## Testing
 
-Keep the file structure. Run test.py firstly. An example is shown as the following:
+Keep the file structure. Run wrapperGA.py firstly, then use the classes. An example is shown as the following:
 
 ```python
-# get the result from GA
+# assuming you have run wrapperGA.py
+# get the optimization result from GA
 manGenerator = ManGenerator()
 manVector = manGenerator.getBit(350)
 
 test = WrapperGa(1000, 1, 0.8, 0.05)
 test.evolution(manVector)
 
-# verify the result
+# verify the GA result by comparing to 
+# the "truely optimized results" retrieved from ExhaustiveResults10x25.txt
 vali = Validator(table)
 vali.getBestDi(350)
 ```
